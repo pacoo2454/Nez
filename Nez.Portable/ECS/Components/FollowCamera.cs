@@ -186,7 +186,7 @@ namespace Nez
 			}
 		}
 
-		public void Follow(Entity targetEntity, CameraStyle cameraStyle = CameraStyle.CameraWindow)
+		public virtual void Follow(Entity targetEntity, CameraStyle cameraStyle = CameraStyle.CameraWindow)
 		{
 			_targetEntity = targetEntity;
 			_cameraStyle = cameraStyle;
@@ -210,7 +210,7 @@ namespace Nez
 		/// </summary>
 		/// <param name="width">Width.</param>
 		/// <param name="height">Height.</param>
-		public void SetCenteredDeadzone(int width, int height)
+		public virtual void SetCenteredDeadzone(int width, int height)
 		{
 			Insist.IsFalse(Camera == null,
 				"camera is null. We cant get its bounds if its null. Either set it or wait until after this Component is added to the Entity.");
